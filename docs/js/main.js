@@ -5,10 +5,20 @@ window.onload = function () {
 
 function navMenu() {
     var display = document.getElementById("nav-collapse").style.display;
+    var arrows = document.getElementsByClassName("arrows");
+    var text = document.getElementsByClassName("carousel__text");
     if (display == "block") {
         document.getElementById("nav-collapse").style.display = "none";
+        for(var i = 0; i < arrows.length; i++) {
+            arrows[i].style.display = "block";
+        }
+        text[0].style.display = "block";
     } else {
         document.getElementById("nav-collapse").style.display = "block";
+        for(var i = 0; i < arrows.length; i++) {
+            arrows[i].style.display = "none";
+        }
+        text[0].style.display = "none";
     }
 }
 
@@ -25,6 +35,7 @@ function carousel() {
         indexImg = 0;
     }
     img[indexImg].style.display = "block";
+    setTimeout(carousel, 4000);
 }
 
 function prevImg() {

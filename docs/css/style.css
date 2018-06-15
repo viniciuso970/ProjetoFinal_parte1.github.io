@@ -5,7 +5,6 @@
     outline: none;
     box-sizing: border-box;
     font-family: 'Lato', sans-serif;
-    font-size: 100%;
     font-weight: 400;
 }
 
@@ -28,7 +27,7 @@ ul {
 .nav {
     background-color: black;
     padding: 3% 3% 3% 0%;
-    position: fixed;
+    position: absolute;
 }
 
 #nav-menu {
@@ -78,41 +77,64 @@ ul {
 .grid-container {
     clear: both;
     display: grid;
-    grid-column-start: 1;
-    grid-column-end: 1;
+    grid-template-columns: auto;
     grid-gap: 0;
+    padding-bottom: 5%;
 }
 
 .arrows {
-   width: 10%;
-   height: auto;
-   position: absolute;
-   background-color: transparent;
-   color: white;
-   margin-top: 100px;
+    width: 10%;
+    height: auto;
+    position: absolute;
+    background-color: transparent;
+    color: white;
+    margin-top: 100px;
 }
 
 .prev {
-   left: 5px;
+    left: 5px;
 }
-   
+
 .next {
-   right: 5px;
+    right: 5px;
 }
 
 #carousel {
     height: 10%;
-    background-color: #da6259;
+    text-align: center;
 }
 
-#carousel img {
+.carousel__img {
     width: 100%;
     height: 200px;
 }
 
-#sobre {
-    height: 10%;
-    background-color: #da6709;
+.carousel__text {
+    top: 30%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    padding: 5% 5% 5% 5%;
+    color: #fff;
+    border: 1px solid #fff;
+    font-size: 1.2em;
+    font-weight: 700;
+    text-shadow: 2px 2px 0 #000;
+}
+
+#sobre {}
+
+.sobre__img {
+    width: 50%;
+    height: 100px;
+    margin: 0 auto;
+}
+
+.sobre__text {
+    padding: 5% 5%;
+    width: 100%;
+    height: auto;
+    text-align: center;
 }
 
 #paginaX {
@@ -125,6 +147,30 @@ ul {
     background-color: #fff;
 }
 
+#contato label, input, button{
+    font-size: 1.4em;
+    padding: 1% 2%;
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#contato input {
+    border: 1px solid #000;
+    border-radius: 50px;
+}
+
+#contato button {
+    margin-top: 3%;
+    border: 1px solid #24619B;
+    background-color: #1279DC;
+    border-radius: 50px;
+}
+
+#contato button:hover {
+    background-color: #233342;
+}
 
 #footer {
     background-color: #2196F3;
@@ -133,6 +179,9 @@ ul {
 @media only screen and (min-width: 375px) {
     .conteudo {
         margin-top: 17%;
+    }
+    .sobre__img {
+        height: 120px;
     }
 }
 
@@ -144,14 +193,17 @@ ul {
         font-size: 2em;
     }
     .conteudo {
-        margin-top: 17%;
+        margin-top: 15%;
     }
     .arrows {
         margin-top: 90px;
-     }
+    }
+    .carousel__text {
+        font-size: 1.5em;
+    }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 512px) {
     .nav {
         padding: 2% 2% 2% 2%;
     }
@@ -159,18 +211,19 @@ ul {
         font-size: 2em;
     }
     .conteudo {
-        margin-top: 10%;
+        margin-top: 11%;
     }
-
-    #carousel img {
-        width: 100%;
-        height: 300px;
+    .arrows {
+        margin-top: 90px;
+    }
+    .carousel__text {
+        font-size: 1.5em;
     }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 768px) {
     .nav {
-        padding: 0;
+        padding: 1% 1% 1% 1%;
     }
     #nav-menu {
         display: none;
@@ -189,21 +242,67 @@ ul {
         width: 25%;
         float: left;
         margin: auto;
-        padding: 2% 10% 2% 10%;
+        padding: 1.5% 7% 1.5% 7%;
     }
     #nav-collapse li a {
         float: left;
         color: #fff;
     }
     #nav-collapse li a:hover {
-        padding: 15%;
+        padding: 2%;
         background-color: #da6709;
+    }
+    .conteudo {
+        margin-top: 7%;
+    }
+    .carousel__img {
+        width: 100%;
+        height: 300px;
+    }
+    .arrows {
+        margin-top: 150px;
+    }
+    .carousel__text {
+        top: 36%;
+        padding: 1% 2% 1% 2%;
+        font-size: 1.7em;
+    }
+    .sobre__img {
+        width: 25%;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    #nav-collapse li {
+        padding: 1% 5% 1% 5%;
+        font-size: 1.5em;
     }
     .conteudo {
         margin-top: 5%;
     }
-    #carousel img {
-        width: 100%;
+    .carousel__img {
         height: 500px;
+    }
+    .arrows {
+        margin-top: 250px;
+    }
+    .carousel__text {
+        top: 53%;
+        font-size: 2.5em;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    #nav-collapse li {
+        padding: 0.5% 5% 0.5% 5%;
+    }
+    .carousel__text {
+        top: 42%;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .carousel__text {
+        top: 42%;
     }
 }

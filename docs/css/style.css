@@ -79,7 +79,18 @@ ul {
     display: grid;
     grid-template-columns: auto;
     grid-gap: 0;
-    padding-bottom: 5%;
+    padding: 0;
+    margin: 0 auto;
+}
+
+#carousel {
+    height: 10%;
+    text-align: center;
+}
+
+.carousel__img {
+    width: 100%;
+    height: 200px;
 }
 
 .arrows {
@@ -99,22 +110,12 @@ ul {
     right: 5px;
 }
 
-#carousel {
-    height: 10%;
-    text-align: center;
-}
-
-.carousel__img {
-    width: 100%;
-    height: 200px;
-}
-
 .carousel__text {
-    top: 30%;
-    left: 50%;
+    margin-top: 85px;
+    padding: 2% 2% 2% 2%;
+    width: 50%;
+    left: 25%;
     position: absolute;
-    transform: translate(-50%, -50%);
-    padding: 5% 5% 5% 5%;
     color: #fff;
     border: 1px solid #fff;
     font-size: 1.2em;
@@ -130,7 +131,7 @@ ul {
     margin: 0 auto;
 }
 
-.sobre__text {
+.texto {
     padding: 5% 5%;
     width: 100%;
     height: auto;
@@ -144,19 +145,27 @@ ul {
 
 #contato {
     height: 10%;
-    background-color: #fff;
 }
 
-#contato label, input, button{
-    font-size: 1.4em;
-    padding: 1% 2%;
-    width: 50%;
+#contato .titulo {
+    border-bottom: 1px solid #000;
+    padding: 3%;
+    margin-bottom: 5%;
+}
+
+#contato label,
+input,
+button {
+    font-size: 1em;
+    padding: 1% 1%;
+    width: 75%;
     height: auto;
     margin: 0 auto;
     text-align: center;
 }
 
 #contato input {
+    background-color: #D2E2D2;
     border: 1px solid #000;
     border-radius: 50px;
 }
@@ -189,9 +198,6 @@ ul {
     .nav {
         padding: 2% 2% 2% 2%;
     }
-    #nav-collapse ul {
-        font-size: 2em;
-    }
     .conteudo {
         margin-top: 15%;
     }
@@ -199,25 +205,14 @@ ul {
         margin-top: 90px;
     }
     .carousel__text {
+        margin-top: 75px;
         font-size: 1.5em;
     }
 }
 
 @media only screen and (min-width: 512px) {
-    .nav {
-        padding: 2% 2% 2% 2%;
-    }
-    #nav-collapse ul {
-        font-size: 2em;
-    }
     .conteudo {
         margin-top: 11%;
-    }
-    .arrows {
-        margin-top: 90px;
-    }
-    .carousel__text {
-        font-size: 1.5em;
     }
 }
 
@@ -229,16 +224,9 @@ ul {
         display: none;
     }
     #nav-collapse {
-        position: static;
         display: block;
     }
-    #nav-collapse ul {
-        width: 100%;
-        padding: 0;
-        font-size: 1.2em;
-    }
     #nav-collapse li {
-        text-align: center;
         width: 25%;
         float: left;
         margin: auto;
@@ -246,29 +234,31 @@ ul {
     }
     #nav-collapse li a {
         float: left;
-        color: #fff;
     }
     #nav-collapse li a:hover {
         padding: 2%;
-        background-color: #da6709;
     }
     .conteudo {
         margin-top: 7%;
     }
     .carousel__img {
-        width: 100%;
         height: 300px;
     }
     .arrows {
         margin-top: 150px;
     }
     .carousel__text {
-        top: 36%;
-        padding: 1% 2% 1% 2%;
+        margin-top: 140px;
         font-size: 1.7em;
     }
     .sobre__img {
         width: 25%;
+    }
+    #contato label,
+    input,
+    button {
+        font-size: 1.2em;
+        width: 50%;
     }
 }
 
@@ -287,8 +277,19 @@ ul {
         margin-top: 250px;
     }
     .carousel__text {
-        top: 53%;
+        margin-top: 230px;
         font-size: 2.5em;
+    }
+    .paragrafo {
+        font-size: 1.2em;
+    }
+    .titulo {
+        font-size: 3em;
+    }
+    #contato label,
+    input,
+    button {
+        font-size: 1.5em;
     }
 }
 
@@ -297,12 +298,15 @@ ul {
         padding: 0.5% 5% 0.5% 5%;
     }
     .carousel__text {
-        top: 42%;
+        margin-top: 230px;
     }
 }
 
 @media only screen and (min-width: 1440px) {
-    .carousel__text {
-        top: 42%;
+    .paragrafo {
+        font-size: 1.7em;
+    }
+    .titulo {
+        font-size: 4em;
     }
 }

@@ -1,6 +1,7 @@
 window.onload = function () {
     document.getElementById("nav-menu").addEventListener("click", navMenu);
     carousel();
+    initMap();  
 }
 
 function navMenu() {
@@ -57,3 +58,18 @@ function nextImg() {
     }
     img[indexImg].style.display = "block";
 }
+
+function initMap() {
+    var myLatLng = {lat: -22.4136042, lng: -45.4515125};
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 15,
+      center: myLatLng
+    });
+
+    var marker = new google.maps.Marker({
+      position: myLatLng,
+      map: map,
+      title: 'byron.solutions'
+    });
+  }

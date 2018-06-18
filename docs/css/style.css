@@ -1,3 +1,7 @@
+/* 
+--------------- RESET ------------------
+*/
+
 * {
     margin: 0;
     padding: 0;
@@ -16,6 +20,10 @@ ul {
     list-style: none;
 }
 
+/* 
+--------------- PADRÕES ------------------
+*/
+
 .page {
     width: 100%;
     height: auto;
@@ -23,6 +31,31 @@ ul {
     left: 0;
     position: static;
 }
+
+.grid-container {
+    clear: both;
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 0;
+    padding: 0;
+    padding-bottom: 5%;
+    margin: 0 auto;
+}
+
+.conteudo {
+    margin-top: 20%;
+}
+
+.paragrafo, .titulo {
+    padding: 2%;
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+/* 
+--------------- NAVBAR ------------------
+*/
 
 .nav {
     background-color: black;
@@ -70,19 +103,9 @@ ul {
     background-color: #da6709;
 }
 
-.conteudo {
-    margin-top: 20%;
-}
-
-.grid-container {
-    clear: both;
-    display: grid;
-    grid-template-columns: auto;
-    grid-gap: 0;
-    padding: 0;
-    padding-bottom: 2%;
-    margin: 0 auto;
-}
+/* 
+--------------- CAROUSEL ------------------
+*/
 
 #carousel {
     height: 10%;
@@ -124,18 +147,19 @@ ul {
     text-shadow: 2px 2px 0 #000;
 }
 
+/* 
+--------------- SOBRE ------------------
+*/
+
 .sobre__img {
     width: 100px;
     height: 100px;
     margin: 0 auto;
 }
 
-.texto {
-    padding: 5% 5%;
-    width: 100%;
-    height: auto;
-    text-align: center;
-}
+/* 
+--------------- BYRON ------------------
+*/
 
 .byron {
     padding-top: 5%;
@@ -181,8 +205,14 @@ a {
     margin: 0 auto;
 }
 
+/* 
+--------------- CONTATO ------------------
+*/
+
+
 #contato {
     height: 10%;
+    padding-bottom: 5%;
 }
 
 #contato .titulo {
@@ -211,16 +241,36 @@ button {
 #contato button {
     margin-top: 3%;
     border: 1px solid #24619B;
-    background-color: #1279DC;
+    background-color: #1ED7F3;
     border-radius: 50px;
 }
 
 #contato button:hover {
-    background-color: #233342;
+    background-color: #252525;
+    color: white;
 }
 
+/* 
+--------------- FOOTER ------------------
+*/
+
 #footer {
-    background-color: #2196F3;
+    background-color: #000;
+    color: white;
+}
+
+.footer__sociais {
+    padding: 5% 0%;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.footer__sociais__item {
+    padding: 0%;
+    font-size: 1.4em;
+    text-align: center;    
 }
 
 @media only screen and (min-width: 375px) {
@@ -245,9 +295,6 @@ button {
     .carousel__text {
         margin-top: 75px;
         font-size: 1.5em;
-    }
-    .paragrafo {
-        text-align: center;
     }
     #map {
         margin-top: 5%;
@@ -332,6 +379,14 @@ button {
         font-size: 1.2em;
         width: 50%;
     }
+
+    .footer__sociais {
+        padding: 4% 0%;
+    }
+
+    .footer__sociais__item {
+        font-size: 1.5em;
+    }
 }
 
 @media only screen and (min-width: 1024px) {
@@ -382,6 +437,9 @@ button {
     button {
         font-size: 1.5em;
     }
+    .footer__sociais__item {
+        font-size: 2em;
+    }
 }
 
 @media only screen and (min-width: 1280px) {
@@ -409,5 +467,8 @@ button {
     .container__servicos p {
         font-size: 1.7em;
         margin-top: 5%;
+    }
+    .footer__sociais__item {
+        font-size: 2.5em;
     }
 }
